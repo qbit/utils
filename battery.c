@@ -32,7 +32,6 @@ main(int argc, char **argv)
 	if (pledge("stdio rpath wpath cpath", NULL) == -1)
 		err(1, "pledge");
 
-	//printf("%s%d\n", info.ac_state == 0 ? "-" : "",info.battery_life);
 	if (cr)
 		printf("%s%d\n", (info.ac_state == 0 && state == TRUE) ? "-" : "", info.battery_life);
 	else
