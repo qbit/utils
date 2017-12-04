@@ -5,7 +5,7 @@ int
 main(int argc, char *argv[])
 {
 	int ch;
-	char *c;
+	char *c = "";
 	while ((ch = getopt(argc, argv, "p:")) != -1) {
 		switch(ch) {
 		case 'p':
@@ -17,7 +17,7 @@ main(int argc, char *argv[])
         }
 
 	if (pledge(NULL, c) == -1)
-		err(1, "pledge");
+		err(1, "");
 
 	execvp(argv[0], argv);
 }
