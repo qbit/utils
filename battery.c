@@ -15,7 +15,7 @@ main(int argc, char **argv)
 	int cr = TRUE;
 	int state = FALSE;
 	struct apm_power_info info;
-	while ((ch = getopt(argc, argv, "ln")) != -1) {
+	while ((ch = getopt(argc, argv, "bhln")) != -1) {
 		switch(ch) {
 		case 'l':
 			state = TRUE;
@@ -23,6 +23,9 @@ main(int argc, char **argv)
 		case 'n':
 			cr = FALSE;
 			break;
+		case 'h':
+			printf("Usage: [lnh]\n");
+			return 0;
 		}
 	}
 
