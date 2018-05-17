@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 int
-main(int argc, char **argv)
+main()
 {
 	int apmfd;
 	struct apm_power_info info;
