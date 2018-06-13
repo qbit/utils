@@ -1,18 +1,5 @@
-CC=cc
+# $OpenBSD$
 
-all: bin/battery bin/ac bin/pledge
+SUBDIR= battery pledge
 
-clean:
-	rm -f bin/*
-
-bin/battery: battery.c
-	${CC} $> -o $@
-
-bin/ac: ac.c
-	${CC} $> -o $@
-
-bin/pledge: pledge.c
-	${CC} $> -o $@
-
-install:
-	cp bin/* ~/bin/
+.include <bsd.subdir.mk>

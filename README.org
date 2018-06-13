@@ -1,2 +1,0 @@
-* utils
-A collection of utilities I use from day to day.
